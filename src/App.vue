@@ -9,5 +9,6 @@ import { RouterView } from 'vue-router'
     </div>
   </header>
 
+  <!-- TODO: add transition -->
   <RouterView />
 </template>

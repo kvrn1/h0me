@@ -170,3 +170,12 @@
 * {
     font-family: Roboto, sans-serif;
 }
+
+p {
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration-line: underline;
+}
