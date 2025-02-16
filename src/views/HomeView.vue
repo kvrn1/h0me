@@ -8,8 +8,6 @@ import { RouterLink } from 'vue-router'
       <img src="@/assets/images/pfp.png" alt="Profil picture" class="w-52 rounded-full" />
       <h1 class="text-text text-4xl">KVRN<span class="italic text-secondary">.zip</span></h1>
       <nav class="flex gap-2">
-        <RouterLink to="/">Home</RouterLink>
-        <span>·</span>
         <RouterLink to="/blog">Blog</RouterLink>
         <span>·</span>
         <RouterLink to="/me">About me</RouterLink>
@@ -31,6 +29,5 @@ import { RouterLink } from 'vue-router'
 
       <p>KVRN.zip © {{ new Date().getFullYear() }}</p>
     </div>
-
   </div>
 </template>
