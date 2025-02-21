@@ -1,42 +1,30 @@
 <script setup>
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
+const router = useRouter()
 const route = useRoute()
 
-const crumbs = computed(() => {
-  let pathArray = route.path.split('/')
-  pathArray = pathArray.filter((p) => p !== '')
-  pathArray.unshift('/')
-  console.log(pathArray)
-  console.log(route.matched)
-
-  let breadcrumbArray = []
-  pathArray.forEach((breadcrumb) => {
-    breadcrumbArray.push({
-      path: breadcrumb.path,
-      to: breadcrumbArray[i - 1] ? breadcrumbArray[i - 1].to + '/' + breadcrumb.path : '/',
-      text: route.matched[i]?.meta.breadcrumb || breadcrumb.path,
-    })
-  })
-
-  let breadcrumbs = pathArray.reduce((breadcrumbArray, path, i) => {
-    breadcrumbArray.push({})
-    return breadcrumbArray
-  }, [])
-
-  return breadcrumbs
+const routeName = computed(() => {
+  return route.meta.title
 })
+
+const crumbs = computed(() => {
+  return route.meta.breadcrumbs
+})
+
+const getRouteFromName = (name) => {
+  return router.getRoutes().filter((r) => r.name === name)[0]
+}
 </script>
 
 <template>
   <nav class="flex space-x-2">
-    <RouterLink to="/">KVRN.zip</RouterLink>
-    <p>/</p>
-    <RouterLink to="#">...</RouterLink>
-  </nav>
+    <span class="flex space-x-2" v-for="crumb in crumbs">
+      <RouterLink :to="{ name: crumb.to }">{{ getRouteFromName(crumb.to).meta.title }}</RouterLink>
+      <p>/</p>
+    </span>
 
-  <div class="text-red-300">
-    {{ crumbs }}
-  </div>
+    <p>{{ routeName }}</p>
+  </nav>
 </template>

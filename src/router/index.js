@@ -10,51 +10,62 @@ const router = createRouter(
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
       {
+        name: 'home',
         path: '/',
         component: HomeView,
         meta: {
-          breadcrumb: 'KVRN.zip',
+          title: 'KVRN.zip',
+          breadcrumbs: [],
         },
       },
 
       {
+        name: 'blog',
         path: '/blog',
         component: BlogView,
         meta: {
-          breadcrumb: 'Blog',
+          title: 'Blog',
+          breadcrumbs: [{ to: 'home' }],
         },
-        children: [
-          {
-            path: ':id',
-            components: null,
-            meta: {
-              breadcrumb: 'BlogId',
-            },
-          },
-        ],
       },
 
       {
+        name: 'blogItem',
+        path: '/blog/:id',
+        component: null,
+        meta: {
+          title: null,
+          breadcrumbs: [{ to: 'home' }, { to: 'blog' }],
+        },
+      },
+
+      {
+        name: 'about',
         path: '/me',
         component: AboutMeView,
         meta: {
-          breadcrumb: 'About me',
+          title: 'About me',
+          breadcrumbs: [{ to: 'home' }],
         },
       },
 
       {
+        name: 'contact',
         path: '/contact',
         component: ContactView,
         meta: {
-          breadcrumb: 'Contact',
+          title: 'Contact',
+          breadcrumbs: [{ to: 'home' }],
         },
       },
 
       {
+        name: 'links',
         path: '/links',
         component: CoolLinksView,
         meta: {
-          breadcrumb: 'Cool links',
+          title: 'Cool links',
+          breadcrumbs: [{ to: 'home' }],
         },
       },
     ],
