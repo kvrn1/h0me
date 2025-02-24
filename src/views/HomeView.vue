@@ -70,7 +70,7 @@ const buttonElmts = [
 
     <p><a href="#">←</a> <a href="#">webring</a> <a href="#">→</a></p>
 
-    <p>Source code available <a href="#">here</a> under GPLv3</p>
+    <p>Source code available <a href="https://github.com/kvrn1/h0me">here</a> under GPLv3</p>
 
     <p>KVRN.zip © {{ new Date().getFullYear() }}</p>
   </div>
