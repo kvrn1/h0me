@@ -25,7 +25,7 @@
     <h1>KVRN.zip</h1>
     <p>
       KVRN is just an abbreviation of my last name, nothing too mind breaking. The zip part sounds
-      cool and the subdomain is cheap so big win for me.
+      cool and the domain is cheap, so big win for me.
     </p>
   </div>
 </template>
