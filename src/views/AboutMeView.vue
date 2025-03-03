@@ -4,8 +4,8 @@
     <p>
       Hi, please be welcome if you find your way on this website. The main goal of its existence is
       to keep me busy and stop wasting my time on unwise distractions (hello doomscrolling of
-      death). I'm gonna post all kind of stuff related to projets I'm working on or things I want to
-      share. I cannot guarantee the high frequency of these publications though.
+      death). I'm gonna post all kinds of stuff related to projets I'm working on or things I want
+      to share. I cannot guarantee the high frequency of these publications though.
     </p>
     <h2>Me</h2>
     <p>
@@ -24,8 +24,8 @@
     </p>
     <h2>KVRN.zip</h2>
     <p>
-      <var>KVRN</var> is just an abbreviation of my last name, nothing too mind breaking about it.
-      The zip part sounds cool and the domain is cheap, so big win for me. The look and feel of my
+      <var>KVRN</var> is just an abbreviation of my last name, nothing very complicated here. The
+      zip part sounds cool and the domain is cheap, so big win for me. The look and feel of my
       website is inspired by <a href="https://vinc.cc">Vinc</a>'s own website.
     </p>
   </div>
