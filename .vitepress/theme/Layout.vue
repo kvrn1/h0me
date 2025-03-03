@@ -7,6 +7,10 @@ const { frontmatter } = useData();
 </script>
 
 <template>
-  <BlogIndex v-if="frontmatter.layout === 'blog'" />
-  <BlogPost v-else-if="frontmatter.layout === 'blog-post'" />
+  <div>
+    <main>
+      <BlogIndex v-if="frontmatter.layout === 'blog'" />
+      <Content v-else />
+    </main>
+  </div>
 </template>
