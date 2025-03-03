@@ -1,11 +1,12 @@
 <script setup>
-import { Content, useData } from "vitepress";
+import { useData } from "vitepress";
+import BlogIndex from "./pages/blog/BlogIndex.vue";
 import BlogPost from "./pages/blog/BlogPost.vue";
 
 const { frontmatter } = useData();
 </script>
 
 <template>
-  <BlogPost v-if="frontmatter.layout === 'blog-post'" />
-  <Content v-else />
+  <BlogIndex v-if="frontmatter.layout === 'blog'" />
+  <BlogPost v-else-if="frontmatter.layout === 'blog-post'" />
 </template>
