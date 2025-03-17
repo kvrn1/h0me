@@ -1,16 +1,14 @@
 <script setup>
-import { useData } from "vitepress";
-import BlogIndex from "./pages/blog/BlogIndex.vue";
-import BlogPost from "./pages/blog/BlogPost.vue";
-
-const { frontmatter } = useData();
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
   <div>
+    <Navbar />
     <main>
-      <BlogIndex v-if="frontmatter.layout === 'blog'" />
-      <Content v-else />
+      <Content />
     </main>
+    <Footer />
   </div>
 </template>

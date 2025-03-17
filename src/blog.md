@@ -2,4 +2,4 @@
 layout: blog
 ---
 
-# Blog
+<BlogIndex />

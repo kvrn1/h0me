@@ -6,6 +6,7 @@
       <a href="#">...</a>
       <p>/</p>
       <a href="#">...</a>
+      <p>/</p>
     </span>
 
     <p>page name</p>

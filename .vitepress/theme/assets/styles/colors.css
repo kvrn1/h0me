@@ -1,0 +1,13 @@
+/**********/
+/* COLORS */
+/**********/
+
+/* see https://www.realtimecolors.com/?colors=e5f4d7-3d403a-bae298-25833d-3cc87d&fonts=Inter-Inter */
+
+@theme {
+  --color-text: #e5f4d7;
+  --color-background: #3d403a;
+  --color-primary: #bae298;
+  --color-secondary: #25833d;
+  --color-accent: #3cc87d;
+}

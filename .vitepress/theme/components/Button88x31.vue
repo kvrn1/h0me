@@ -10,6 +10,7 @@ const props = defineProps(["src", "alt", "href"]);
         :href="props.href"
         :alt="props.alt"
         class="opacity-80 grayscale hover:opacity-100 hover:filter-none"
-    /></a>
+      />
+    </a>
   </div>
 </template>
