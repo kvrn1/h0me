@@ -1,5 +1,5 @@
 ---
-layout: links
+layout: page
 ---
 
 # Cool links you should give a look
