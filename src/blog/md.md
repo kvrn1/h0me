@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: markdown
+title: Markdown example 2
 date: 2025-03-25
 ---
 
@@ -75,12 +75,18 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 
 ### Fenced Code Block
 
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
   "age": 25
 }
+```
+
+```c
+#include <stdio.h>
+
+int main() {}
 ```
 
 ### Footnote

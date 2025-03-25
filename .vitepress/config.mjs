@@ -5,4 +5,8 @@ export default defineConfig({
 
   cleanUrls: true,
   srcDir: "src",
+
+  markdown: {
+    theme: "vitesse-black",
+  },
 });
