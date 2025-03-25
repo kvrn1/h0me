@@ -7,10 +7,12 @@ const { frontmatter } = useData();
 </script>
 
 <template>
-  <div>
+  <div
+    class="mx-auto flex h-screen max-w-2xl flex-col justify-between p-4 pb-0"
+  >
     <Navbar v-if="frontmatter.layout !== 'home'" />
-    <main>
-      <Content />
+    <main class="mb-auto">
+      <Content class="prose prose-stone" />
     </main>
     <Footer />
   </div>

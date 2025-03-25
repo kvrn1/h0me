@@ -2,3 +2,5 @@
 
 @import "./colors.css";
 @import "./fonts.css";
+
+@plugin "@tailwindcss/typography";
