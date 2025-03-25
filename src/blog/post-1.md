@@ -1,5 +1,5 @@
 ---
-layout: blog-post
+layout: doc
 title: hello
 date: 2025-03-03
 ---

@@ -1,5 +1,6 @@
 ---
-layout: contact
+layout: page
+title: Contact
 ---
 
 # Contact

@@ -9,13 +9,13 @@
       KVRN<span class="text-secondary italic">.zip</span>
     </h1>
     <nav class="flex gap-2">
-      <a to="/blog">Blog</a>
+      <a href="/blog">Blog</a>
       <span>·</span>
-      <a to="/me">About me</a>
+      <a href="/me">About me</a>
       <span>·</span>
-      <a to="/contact">Contact</a>
+      <a href="/contact">Contact</a>
       <span>·</span>
-      <a to="/links">Cool links</a>
+      <a href="/links">Cool links</a>
     </nav>
   </div>
 </template>
