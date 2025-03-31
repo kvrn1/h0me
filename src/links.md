@@ -3,7 +3,7 @@ layout: page
 title: Cool links
 ---
 
-# Cool links you should give a look
+# Cool links
 
 ## Web development
 

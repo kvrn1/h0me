@@ -8,5 +8,11 @@ export default defineConfig({
 
   markdown: {
     theme: "vitesse-black",
+
+    anchor: {
+      permalink: (slug, opts, state, index) => {
+        console.log(opts);
+      },
+    },
   },
 });

@@ -178,14 +178,17 @@ body {
 
 * {
   font-family: Roboto, sans-serif;
+  @apply text-text;
 }
 
-p,
-span {
-  color: var(--color-text);
+code {
+  @apply text-accent;
 }
 
 a {
-  color: var(--color-accent);
-  text-decoration-line: underline;
+  @apply text-primary underline;
+}
+
+:is(h1, h2, h3, h4, h5, h6) a {
+  @apply text-accent no-underline;
 }
