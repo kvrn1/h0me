@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import anchor from "markdown-it-anchor";
 
 export default defineConfig({
   title: "KVRN.zip",
@@ -10,9 +11,10 @@ export default defineConfig({
     theme: "vitesse-black",
 
     anchor: {
-      permalink: (slug, opts, state, index) => {
-        console.log(opts);
-      },
+      permalink: anchor.permalink.ariaHidden({
+        placement: "before",
+        symbol: "¶",
+      }),
     },
   },
 });

@@ -42,7 +42,9 @@ const buttonElmts = [
 </script>
 
 <template>
-  <div class="border-text mt-8 flex flex-col items-center border-t-1 p-4">
+  <div
+    class="border-text mt-8 flex flex-col items-center border-t-1 p-4 text-center"
+  >
     <div class="grid grid-cols-3 gap-2">
       <Button88x31
         v-for="(btn, key) in buttonElmts"

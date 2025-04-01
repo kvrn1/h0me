@@ -177,7 +177,11 @@ body {
 }
 
 * {
-  font-family: Roboto, sans-serif;
+  font-family: RobotoMono, monospace;
+  @apply text-text;
+}
+
+::marker {
   @apply text-text;
 }
 
@@ -191,4 +195,12 @@ a {
 
 :is(h1, h2, h3, h4, h5, h6) a {
   @apply text-accent no-underline;
+}
+
+blockquote {
+  @apply border-text;
+}
+
+code {
+  @apply bg-text rounded-xs;
 }
