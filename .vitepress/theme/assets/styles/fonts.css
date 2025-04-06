@@ -2,112 +2,6 @@
 /* FONTS */
 /*********/
 
-/* Roboto regular */
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: 200;
-  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: normal;
-  font-weight: 200;
-  src: url("../fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
-}
-
-/* Roboto condensed */
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: condensed;
-  font-weight: normal;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-Regular.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: condensed;
-  font-weight: normal;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-Italic.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: condensed;
-  font-weight: 200;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-Light.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: condensed;
-  font-weight: 200;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-stretch: condensed;
-  font-weight: bold;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-Bold.ttf")
-    format("truetype");
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-stretch: condensed;
-  font-weight: bold;
-  src: url("../fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf")
-    format("truetype");
-}
-
 /* Roboto Mono */
 
 @font-face {
@@ -158,20 +52,6 @@
   src: url("../fonts/RobotoMono/RobotoMono-BoldItalic.ttf") format("truetype");
 }
 
-/* Custom font classes */
-
-.font-sans .font-roboto {
-  font-family: Roboto, sans-serif;
-}
-
-.font-mono .font-roboto-mono {
-  font-family: RobotoMono, monospace;
-}
-
-.font-condensed .font-roboto-condensed {
-  font-family: RobotoCondensed, sans-serif;
-}
-
 body {
   @apply bg-background;
 }
@@ -199,8 +79,4 @@ a {
 
 blockquote {
   @apply border-text;
-}
-
-code {
-  @apply bg-text rounded-xs;
 }
