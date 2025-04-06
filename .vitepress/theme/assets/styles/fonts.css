@@ -85,10 +85,7 @@ blockquote {
   @apply bg-[#1e201d];
 }
 
-.copy {
-  @apply hidden;
-}
-
+.copy,
 .lang {
   @apply hidden;
 }

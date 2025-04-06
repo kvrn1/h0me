@@ -89,6 +89,12 @@ These elements extend the basic syntax by adding additional features. Not all Ma
 int main() {}
 ```
 
+```
+docker ps -a
+```
+
+`docker ps -a`
+
 ### Footnote
 
 Here's a sentence with a footnote. [^1]
