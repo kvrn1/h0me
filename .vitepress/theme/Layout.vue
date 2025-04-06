@@ -22,7 +22,7 @@ const isHome = computed(() => {
       <Home v-if="isHome" />
       <Content
         v-else
-        class="prose prose-stone prose-headings:text-text prose-code:text-accent prose-h1:text-center prose-headings:uppercase max-w-none"
+        class="prose prose-stone prose-headings:text-text prose-h1:text-center prose-headings:uppercase max-w-none"
       />
     </main>
     <Footer />

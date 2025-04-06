@@ -80,3 +80,7 @@ a {
 blockquote {
   @apply border-text;
 }
+
+.vitesse-black {
+  @apply bg-[#1e201d];
+}
