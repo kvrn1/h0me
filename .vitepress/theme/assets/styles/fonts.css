@@ -84,3 +84,11 @@ blockquote {
 .vitesse-black {
   @apply bg-[#1e201d];
 }
+
+.copy {
+  @apply hidden;
+}
+
+.lang {
+  @apply hidden;
+}

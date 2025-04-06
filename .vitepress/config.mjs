@@ -8,7 +8,6 @@ export default defineConfig({
   srcDir: "src",
 
   markdown: {
-    lineNumbers: true,
     theme: "vitesse-black",
 
     anchor: {
