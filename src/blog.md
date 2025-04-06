@@ -3,4 +3,6 @@ layout: page
 title: Blog
 ---
 
-<BlogIndex />
+# Blog
+
+<Blog />

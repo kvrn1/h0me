@@ -1,9 +1,8 @@
 <script setup>
-import { data as posts } from "../../../data/blog.data.mjs";
+import { data as posts } from "../../data/blog.data.mjs";
 </script>
 
 <template>
-  <h1>Blog</h1>
   <ul>
     <li v-for="post in posts">
       <p>

@@ -16,7 +16,7 @@ const crumbs = computed(() => {
 </script>
 
 <template>
-  <nav class="flex space-x-2">
+  <nav class="mb-15 flex space-x-2">
     <span v-for="crumb in crumbs" class="flex space-x-2">
       <a :href="crumb.href">{{ crumb.title }}</a>
       <p>/</p>

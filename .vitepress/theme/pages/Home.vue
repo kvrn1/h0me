@@ -1,17 +1,12 @@
 <template>
-  <div class="flex flex-col items-center">
-    <img
-      src="../assets/images/pfp.png"
-      alt="Profil picture"
-      class="w-52 rounded-full"
-    />
-    <h1 class="text-text text-4xl">
-      KVRN<span class="text-secondary italic">.zip</span>
+  <div class="flex flex-col items-center py-12">
+    <h1 class="text-text mt-32 mb-24 text-8xl">
+      KVRN<span class="!text-accent tracking-tighter italic">.zip</span>
     </h1>
-    <nav class="flex gap-2">
-      <a href="/blog">Blog</a>
-      <span>·</span>
+    <nav class="flex gap-2 text-lg">
       <a href="/me">About me</a>
+      <span>·</span>
+      <a href="/blog">Blog</a>
       <span>·</span>
       <a href="/contact">Contact</a>
       <span>·</span>
