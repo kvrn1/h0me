@@ -1,6 +1,6 @@
 ---
 layout: home
-title: KVRN.zip
+title: Home
 ---
 
 <Home />
