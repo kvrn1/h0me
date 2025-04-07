@@ -22,6 +22,6 @@ const crumbs = computed(() => {
       <p>/</p>
     </span>
 
-    <p>{{ frontmatter.title }}</p>
+    <p>{{ frontmatter.title || "404" }}</p>
   </nav>
 </template>

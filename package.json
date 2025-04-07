@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview",
+    "preview": "vitepress build && vitepress preview",
     "format": "prettier --write ."
   }
 }

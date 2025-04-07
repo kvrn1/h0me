@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center py-12">
-    <h1 class="text-text mt-32 mb-24 text-8xl">
+    <h1 class="text-text mt-32 mb-24 text-8xl font-bold">
       KVRN<span class="!text-accent tracking-tighter italic">.zip</span>
     </h1>
     <nav class="flex gap-2 text-lg">
