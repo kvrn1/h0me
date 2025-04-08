@@ -45,7 +45,7 @@ const buttonElmts = [
   <div
     class="border-text mt-8 flex flex-col items-center border-t-1 p-4 text-center"
   >
-    <div class="grid grid-cols-3 gap-2">
+    <div class="mb-2 grid grid-cols-3 gap-2">
       <Button88x31
         v-for="(btn, key) in buttonElmts"
         :key="key"
@@ -55,9 +55,9 @@ const buttonElmts = [
       />
     </div>
 
-    <p class="my-2">
+    <!-- <p class="my-2">
       <a href="#">←</a> <a href="#">webring</a> <a href="#">→</a>
-    </p>
+    </p> -->
 
     <p>
       Source code available

@@ -1,15 +1,17 @@
 <template>
   <div class="flex flex-col items-center py-12">
-    <h1 class="text-text mt-32 mb-24 text-8xl font-bold">
+    <h1
+      class="text-text mt-20 mb-16 text-6xl font-bold md:mt-32 md:mb-24 md:text-8xl"
+    >
       KVRN<span class="!text-accent tracking-tighter italic">.zip</span>
     </h1>
-    <nav class="flex gap-2 text-lg">
+    <nav class="flex flex-col gap-2 text-center text-lg md:flex-row">
       <a href="/me">About me</a>
-      <span>·</span>
+      <span class="hidden md:block">·</span>
       <a href="/blog">Blog</a>
-      <span>·</span>
+      <span class="hidden md:block">·</span>
       <a href="/contact">Contact</a>
-      <span>·</span>
+      <span class="hidden md:block">·</span>
       <a href="/links">Cool links</a>
     </nav>
   </div>

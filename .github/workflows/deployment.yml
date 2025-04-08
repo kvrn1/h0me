@@ -1,0 +1,56 @@
+name: Deployment-pipeline
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  ############################################################
+  # Pull project on production server and (re)start services #
+  ############################################################
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      #
+      # Install ssh keys in the GitHub actions runner
+      #
+      - name: Install ssh keys
+        # check this thread to understand why its needed:
+        # https://stackoverflow.com/a/70447517
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -p ${{ vars.SSH_PORT }} -H ${{ vars.SSH_HOST }} > ~/.ssh/known_hosts
+
+      #
+      # Connect to production server and pull project
+      #
+      - name: Connect and pull
+        run: >
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+            cd ${{ vars.WORK_DIR }} &&
+            git checkout master &&
+            git pull &&
+            exit
+          "
+
+      #
+      # Deploy service to NGINX
+      #
+      - name: Deploy to NGINX
+        run: >
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+            cd ${{ vars.WORK_DIR }} &&
+            npm install &&
+            npm run build &&
+            mv .vitepress/dist/* ${{ vars.WWW_DIR }}
+            exit
+          "
+
+      #
+      # Remove ssh keys from the GitHub actions runner
+      #
+      - name: Cleanup
+        run: shred -uvz ~/.ssh/*
