@@ -22,15 +22,15 @@ jobs:
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+          ssh-keyscan -p ${{ vars.SSH_PORT }} -H ${{ vars.SSH_HOST }} > ~/.ssh/known_hosts
 
       #
       # Connect to production server and pull project
       #
       - name: Connect and pull
         run: >
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p${{ secrets.SSH_PORT }} "
-            cd ${{ secrets.WORK_DIR }} &&
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+            cd ${{ vars.WORK_DIR }} &&
             git checkout master &&
             git pull &&
             exit
@@ -41,11 +41,11 @@ jobs:
       #
       - name: Deploy to NGINX
         run: >
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p${{ secrets.SSH_PORT }} "
-            cd ${{ secrets.WORK_DIR }} &&
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+            cd ${{ vars.WORK_DIR }} &&
             npm install &&
             npm run build &&
-            mv .vitepress/dist/* ${{ secrets.WWW_DIR }}
+            mv .vitepress/dist/* ${{ vars.WWW_DIR }}
             exit
           "
 
