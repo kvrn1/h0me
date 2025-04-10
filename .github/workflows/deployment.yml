@@ -29,7 +29,7 @@ jobs:
       #
       - name: Connect and pull
         run: >
-          ssh -i ~/.ssh/id_rsa ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
             cd ${{ vars.WORK_DIR }} &&
             git checkout master &&
             git pull &&
@@ -41,7 +41,7 @@ jobs:
       #
       - name: Deploy to NGINX
         run: >
-          ssh -i ~/.ssh/id_rsa ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
+          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
             cd ${{ vars.WORK_DIR }} &&
             npm install &&
             npm run build &&
