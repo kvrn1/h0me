@@ -7,50 +7,33 @@ on:
   workflow_dispatch:
 
 jobs:
-  ############################################################
-  # Pull project on production server and (re)start services #
-  ############################################################
+  #####################################
+  # Push project on production server #
+  #####################################
   deploy:
     runs-on: ubuntu-latest
     steps:
-      #
-      # Install ssh keys in the GitHub actions runner
-      #
-      - name: Install ssh keys
-        # check this thread to understand why its needed:
-        # https://stackoverflow.com/a/70447517
-        run: |
-          install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          ssh-keyscan -p ${{ vars.SSH_PORT }} -H ${{ vars.SSH_HOST }} > ~/.ssh/known_hosts
+
+      - name: Pull project
+      - uses: actions/checkout@v4
 
       #
-      # Connect to production server and pull project
+      # Build project
       #
-      - name: Connect and pull
-        run: >
-          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
-            cd ${{ vars.WORK_DIR }} &&
-            git checkout master &&
-            git pull &&
-            exit
-          "
+      - name: Build project
+      - uses: actions/setup-node@v4
+      - run: npm install
+      - run: npm run build --if-present
 
       #
-      # Deploy service to NGINX
+      # Deploy static files to prod server
       #
-      - name: Deploy to NGINX
-        run: >
-          ssh ${{ vars.SSH_USER }}@${{ vars.SSH_HOST }} -p${{ vars.SSH_PORT }} "
-            cd ${{ vars.WORK_DIR }} &&
-            npm install &&
-            npm run build &&
-            mv .vitepress/dist/* ${{ vars.WWW_DIR }}
-            exit
-          "
-
-      #
-      # Remove ssh keys from the GitHub actions runner
-      #
-      - name: Cleanup
-        run: shred -uvz ~/.ssh/*
+      - name: Copy file to server
+      - uses: appleboy/scp-action@v0.1.7
+      - with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: .vitepress/dist/*
+          target: ${{ secrets.WWW_DIR }}
