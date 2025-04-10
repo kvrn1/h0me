@@ -19,15 +19,15 @@ jobs:
       # Build project
       #
       - name: Build project
-      - uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
       - run: npm install && npm run build --if-present
 
       #
       # Deploy static files to prod server
       #
       - name: Copy file to server
-      - uses: appleboy/scp-action@v0.1.7
-      - with:
+        uses: appleboy/scp-action@v0.1.7
+        with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
