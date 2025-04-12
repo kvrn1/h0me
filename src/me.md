@@ -9,7 +9,7 @@ Hi, please be welcome if you find your way on this website. The main goal of its
 
 ## Me
 
-By the way my name is Louis, currently a CS student. For many years now, I've been flawlessly using Linux systems and developing various projects for school or learning purpose (webapps, android development, database exploitation, backend and REST API, frontend and UI/UX creation, etc.). Django and VueJS are my stacks of choice for web development. I'm also confortable with Java Spring or .NET framework (but I would prefer not to touch this crap or any of Microsoft's products again in my life). I like my coffee like I like my software: without some big corpo's AI shit in it (the pun is a bit strange but I hope you get the idea).
+By the way my name is Louis, currently a CS student. For many years now, I've been flawlessly using Linux systems and developing various projects for school or learning purpose (webapps, android development, database exploitation, backend and REST API, frontend and UI/UX creation, etc.). Django and Vue.js are my stacks of choice for web development. I'm also confortable with Java Spring or .NET framework (but I would prefer not to touch this crap or any of Microsoft's products again in my life). I like my coffee like I like my software: without some big corpo's AI shit in it (the pun is a bit strange but I hope you get the idea).
 
 ## KVRN.zip
 
