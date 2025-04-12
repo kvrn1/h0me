@@ -43,8 +43,8 @@ jobs:
         run: >
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p${{ secrets.SSH_PORT }} "
             cd ${{ secrets.WORK_DIR }} &&
-            npm install &&
-            npm run build &&
+            npm ci --silent &&
+            npm run build --silent &&
             cp -R .vitepress/dist/* ${{ secrets.WWW_DIR }}
             exit
           "
