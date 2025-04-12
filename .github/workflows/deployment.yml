@@ -45,7 +45,8 @@ jobs:
             cd ${{ secrets.WORK_DIR }} &&
             npm ci --silent &&
             npm run build --silent &&
-            cp -R .vitepress/dist/* ${{ secrets.WWW_DIR }}
+            rm -R ${{ secrets.WWW_DIR }} &&
+            cp -R .vitepress/dist/* ${{ secrets.WWW_DIR }} &&
             exit
           "
 
