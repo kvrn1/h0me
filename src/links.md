@@ -21,6 +21,7 @@ title: Cool links
 - [P\*racy survival guide](https://www.reddit.com/r/Piracy/wiki/megathread)
 - [Radio Garden](https://radio.garden)
 - [TV garden](https://tv.garden)
+- [freemediaheckyeah](https://fmhy.net)
 
 ## Miscellaneous
 

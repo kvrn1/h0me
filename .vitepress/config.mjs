@@ -4,7 +4,7 @@ import anchor from "markdown-it-anchor";
 export default defineConfig({
   title: "KVRN.zip",
   titleTemplate: "KVRN.zip - :title",
-  description: "Louis Kvrn's personal website",
+  description: "Hello there",
 
   head: [
     [
